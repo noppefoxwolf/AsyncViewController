@@ -1,7 +1,7 @@
 
 import UIKit
 
-public final class AsyncViewController<Content: UIViewController, Loading: UIViewController, Result>: UIViewController {
+public final class AsyncViewController<Content: UIViewController, Loading: UIViewController, Result: Sendable>: UIViewController {
     
     let makeContentViewController: (Result) -> Content
     let makeLoadingViewController: () -> Loading
